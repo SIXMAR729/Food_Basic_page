@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../img/cleanfood1.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 60px;
+    margin-right: 6rem;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.main-nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.main-nav li a:hover {
+    color:#e67e22;
+    border-bottom: 2px solid #e67e22;
+    transition: all 0.25s ease-in;
+    padding: 5px 0;
+}
+
+.logo img {
+    height: 100px;
+    float: left;
+    margin-left: 5rem;
+    margin-top: 30px;
+}
+
+.btn {
+    border:1px solid#e67e22;
+    padding: 10px 30px;
+    color: #e67e22;
+    text-decoration: none;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+.button-awesome {
+    margin-top: 50px;
+}
+
+.btn-half {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+.btn-full:hover {
+    background-color: #e67e22;
+    color: #ffffff;
+    transition: all 0.5s ease-in;
+}
+/* Nav bar maxwidth */
+@media only screen and (max-width: 600px) {
+    
+#my-Nav {   
+            display: block;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: #042331;
+            transition: all .5s ease;
+          }
+          .sidebar span {
+            font-size: 22px;
+            color: white;
+            line-height: 70px;
+            text-align: center;
+            background: #063146;
+            user-select: none;
+          }
+          .sidebar ul a{
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 65px;
+            font-size: 20px;
+            color: white;
+            padding-left: 40px;
+            box-sizing: border-box;
+            border-bottom: 1px solid black;
+            border-top: 1px solid rgba(255,255,255,.1);
+            transition: .4s;
+          }
+          ul li:hover a{
+            padding-left: 50px;
+          }
+          .sidebar ul a i{
+            margin-right: 16px;
+          }
+          #check{
+            display: none;
+          }
+          label #btn,label #cancel{
+            position: absolute;
+            background: #042331;
+            border-radius: 3px;
+            cursor: pointer;
+          }
+          label #btn{
+            left: 40px;
+            top: 25px;
+            font-size: 35px;
+            color: white;
+            padding: 6px 12px;
+            transition: all .5s;
+          }
+          label #cancel{
+            z-index: 1111;
+            left: -195px;
+            top: 17px;
+            font-size: 30px;
+            color: #0a5275;
+            padding: 4px 9px;
+            transition: all .5s ease;
+          }
+          #check:checked ~ .sidebar{
+            left: 0;
+          }
+          #check:checked ~ label #btn{
+            left: 250px;
+            opacity: 0;
+            pointer-events: none;
+          }
+          #check:checked ~ label #cancel{
+            left: 195px;
+          }
+          #check:checked ~ section{
+            margin-left: 250px;
+          }
+    }
+
+/* Delivery page*/
+
+#b-deli {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../img/deli_cleanfood.jpg);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container_deli {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container_deli .box_deli {
+  position: relative;
+  width: 350px;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+  border-radius: 4px;
+  margin: 20px;
+  box-shadow: border-box;
+  overflow: hidden;  
+}
+
+.container_deli .box_deli::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255, .2);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.container_deli .box_deli .icon_deli {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 700;
+  transition: 1s;
+
+}
+
+.container_deli .box_deli:nth-child(1) .icon_deli {
+  box-shadow: 0 0 0 0 #e91e63;
+  background: #e91e63;
+}
+
+.container_deli .box_deli:nth-child(1):hover .icon_deli {
+  box-shadow: 0 0 0 400px #e91e63;
+  background: #e91e63;
+}
+
+.container_deli .box_deli:nth-child(2) .icon_deli {
+  box-shadow: 0 0 0 0 #23e629;
+  background: #23e629;
+}
+
+.container_deli .box_deli:nth-child(2):hover .icon_deli {
+  box-shadow: 0 0 0 400px #23e629;
+  background: #23e629;
+}
+
+.container_deli .box_deli:nth-child(3) .icon_deli {
+  box-shadow: 0 0 0 0 #2196f3;
+  background: #2196f3;
+}
+
+.container_deli .box_deli:nth-child(3):hover .icon_deli {
+  box-shadow: 0 0 0 400px #2196f3;
+  background: #2196f3;
+}
+
+.container_deli .box_deli .content_deli h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.container_deli .box_deli .content_deli p {
+  margin: 0;
+  padding: 0;
+}
+
+.a-deli {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgb(255, 245, 245);
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+
+}
+
+
